@@ -124,7 +124,7 @@ Func sortItem()
 
 
 	For $i = 0 to $size
-			$itemControlId = GUICtrlRead( $arraybtm[$i])
+			$itemControlId = Int(GUICtrlRead( $arraybtm[$i]))
 		If ($itemControlId <> "" ) Then
 			_ArrayAdd($tempArrayValue, $itemControlId)
 		EndIf
