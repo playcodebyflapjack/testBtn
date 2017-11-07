@@ -40,7 +40,7 @@ While 1
 WEnd
 
 Func Button1Click()
-  $controlID = getControlByID(@GUI_CtrlId)
+  $controlID = @GUI_CtrlId
   $value = GUICtrlRead ($controlID)
 
 	if($value <> "") Then
@@ -62,17 +62,6 @@ Func Button1Click()
 
 EndFunc
 
-Func getControlByID($conditionId)
-
-	For $i = 0 to UBound($arraybtm) - 1
-		$itemControlId = $arraybtm[$i]
-
-		if  $itemControlId = $conditionId Then
-			return $itemControlId
-		EndIf
-	Next
-
-EndFunc
 
 Func getControlIDByBtnValue($conditionIdValue)
 
